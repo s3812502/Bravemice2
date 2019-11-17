@@ -1,0 +1,204 @@
+<!DOCTYPE HTML>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>BraveMice RMIT Group Assignment</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<a href="https://github.com/BraveMice/bravemice" class="title">BraveMice@GitHub</a>
+				<nav>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="index.html#one" class="active">Who We Are</a></li>
+						<li><a href="elements.html">Elements</a></li>
+					</ul>
+				</nav>
+			</header>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<section id="main" class="wrapper">
+						<div class="inner">
+							<h1 class="major">Tools</h1>
+
+							<h3>AWS Cloud for server-side components</h3>
+
+							<p>Amazon web services came after the amazon store but is now not only amazon’s biggest revenue stream but the biggest player in the public cloud scene. To get started with AWS it is as easy as requiring an email address, a credit card and a desire to use it.</p>
+
+							<p>Aws infrastructure is divided up into regions and availability zones. An availability zone is a cluster of datacentres within a geographical region and in Australasian region we have two of these zones whereas it is more common to have 3 or more. Amazon generally tends to not use version numbers and is always improving generally at such a fast pace versioning might be a hindrance.</p>
+
+							<p>We at GamR are using AWS infrastructure at the core and can be broken down into the following components.</p>
+
+							<h3>Amazon Elastic Compute Cloud (EC2)</h3>
+
+							<p>EC2 was founded in 2006 and is one of the founding services that really got the webservices side of amazon to be the giant it is today. Amazon EC2 is an abbreviation for Elastic compute and is the platform build further upon the boom of virtualisation of PC systems. This is where you can host a traditional machine like a windows server in a virtual machine but not on your server rack but amazons. As with all cloud infrastructure you are not generally permitted to go to the location and or know where your data is being stored/held except the country you choose.</p>
+
+							<p>We are using this service to host the application server as it is idea for start-ups like GamR for the following reasons.</p>
+
+							<h4>Financial</h4>
+
+							<p>We don’t have a lot of capital to go invest in hardware or software that well initially we won’t be using. Even if we did and eventually after finally reaching its full potential, we would then have to buy additional equipment. GamR being a cloud native endeavour we will completely avoid the never-ending cycle of infrastructure ownership hence the capital expense to start up will be significantly lower.</p>
+
+							<h4>Resources</h4>
+
+							<p>If we don’t purchase IT infrastructure, we will never have to employ a team to manage it. We will have a cloud engineer but utilizing AWS manging their core infrastructure we won’t have to worry about it.
+
+							Running costs for owning infrastructure like using power will be replaced with the rental cost of the cloud infrastructure but rental costs of server racks and locations for these will not be a issue.</p>
+
+							<h3>Amazon RDS</h3>
+
+							<p>Amazon RDS is EC2 infrastructure at its core, but it sold more as a managed service. This amazon service is like a custom interface to manage your cluster of EC2 DB machines. You can still choose the spec of the underlying machines to manage your DB appropriately but the operating systems of said machines is all managed by AWS.</p>
+
+							<p>We could host an EC2 instance with a DB server on it for GamR and this will allow for greater control but at the risk of great security threat. We are using the managed service as it offers a little less control for more convenience and security. Using this service, we can also setup distributed DBS across multiple availability zones and or use read replicas to spread customer demand.</p>
+
+							<h3>S3</h3>
+
+							<p>S3 is amazons object-based cloud storage service and S3 stands for Simple Storage Service. Amazon S3 is object based not file based like your traditional mediums hence it has a theoretical endless amount of space, not that you need to worry as its all managed by AWS. S3 will be GamR’s storage medium for profile images as it is cheap and flexible while common in a such ways that all the application and DB servers can read write to it.</p>
+
+							<p>This data is commonly spread across multiple availability zones which is how AWS devices countries into different data centres. With these multiple copies and resilience to replicate if one entire data centre went down it is rated for 99.99% availability over a given year and is durably to 99.999999999 so data loss is most likely never going to happen.</p>
+
+							<h3>Route 53</h3>
+
+							<p>This is amazon’s domain hosting and DNS services. We have chosen to keep this with amazon even though ultimately there are hundreds of providers for these services. The ease comes into things as it can be managed from the same console, comes on the same bill and can be monitored under AWS billing alerts along with IAM permissions can be attached to maintain security.</p>
+
+							<p>Amazon has moved beyond EC2 with Amazon Lambda server less compute service but moving to this module straight away is out of the feasible room for us at this stage. Decentralising and decoupling core systems is beyond our technical knowledge at this stage. When everything gets off the ground however this route seems to be the obvious direction to take.</p>
+
+							<h3>Git</h3>
+
+							<p>Git hub is a cloud hosted service based around a version control system called git and is an open source program/platform created by Linus Torvalds the person who created Linux. His desire was to solve the issue of multiple programmers working on the same code at the same time without them overwriting each other's work while allowing for off-site backup.</p>
+
+							<p>We at GamR will mostly rely on the backup initially like various other cloud software such as solutions like DropBox and Microsoft One Drive but by using GitHub for the code in place for rapid expansion of multiple coders working on our code at once.</p>
+
+							<p>GitHub can be used by command line or via a graphical user interface from the website or a locally installed program communicating to the GitHub via code on your behalf.</p>
+
+							<p>The programmers in the team to start working for the day will pull a copy of the repository (Folder) from the hub to their local machine, multiple workers shall all each have a local copy of the repository with files initially all identical but as they work on their designated sections of GamR code throughout the day it will all now be slightly different. When they finish for the day, they issue a command to push their copy of the folder (Git) to the repository on GitHub. The favourite part of the process for programmers is when multiple people do this and there is a conflict git will add both versions of the same line independently for review. GitHub will also store every version independently of one another allowing users to track changes and or refer to older versions if required. If programmer A works on section A and programmer B works on section B git will combine these two changes to make one file going forward but will keep the versions in history.</p>
+
+							
+							<h3>Github commit trail</h3>
+							<img src="images/commit trail.JPG" alt="">
+							<br>
+							<h3>Brad commit</h3>
+							<img src="images/Brad commit.JPG" alt="">
+							<br>
+							<h3>Matthew commit</h3>
+							<img src="images/Matthew commit.JPG" alt="">
+							<br>
+							<h3>Travis commit</h3>
+							<img src="images/Travis commit.JPG" alt="">
+							<br>
+							<h3>Trevor commit</h3>
+							<img src="images/Trevor commit.JPG" alt="">
+							<br>
+							<h3>Zane commit</h3>
+							<img src="images/Zane commit.JPG" alt="">
+							<br>
+							<br>
+							<br>
+							
+							<h3>Adobe XD - 22.3.12.2</h3>
+
+							<p>Adobe XD is a creative software that was used to construct a wireframe of the mobile app for our project. The software allowed the group to view the wireframe through a shareable web link. It also offered the group the ability to comment and discuss the wireframe of the mobile app and the web link retained the same address even when the wireframe was updated. This allowed the group to follow along with the progress of the wireframe. Because of our lack of skills in mobile app development and technical know-how we came to rely upon this wireframe as the proof of concept for our project. Thankfully, Adobe XD also possessed an interactive capability which allowed us to engage with the wireframe as if it were a functional mobile application.</p>
+							
+							<p><i><b>Link to GamR wireframe: </b></i><a href="https://xd.adobe.com/spec/297b5083-5066-4570-7a5d-a929f6529169-5f4a/">https://xd.adobe.com/spec/297b5083-5066-4570-7a5d-a929f6529169-5f4a/</a></p>
+							
+							<h3>Gamr Wireframe</h3>
+							
+							<img src="images/Adobe XD wireframe 2.jpg" alt="">
+							
+							<br>
+							<br>
+							
+							<h3>Gamr Wireframe interactivity</h3>
+							
+							<img src="images/Adobe XD wireframe interactivity 2.jpg" alt="">
+							
+							<br>
+							<br>
+							
+							<h3>Wireframe Feedback</h3>
+							<img src="images/wireframe feedback 1.JPG" alt="">
+							
+							<br>
+							<br>	
+							<br>
+							
+							<h3>GamR Proof of Concept</h3>
+							
+							<iframe width="1120" height="630" align="center" src="https://www.youtube.com/embed/Tffz0dPSZzo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+							<br>
+							<br>
+							<br>
+							
+							<h3>Wireframe References</h3>
+							
+							<p>Royalty Vectors. VectorStock. (2019) <i>Avatar profile icon set - people icons vector image on VectorStock</i> [online] Available at:  <a href="https://www.vectorstock.com/royalty-free-vector/avatar-profile-icon-set-people-icons-vector-3684891">https://www.vectorstock.com/royalty-free-vector/avatar-profile-icon-set-people-icons-vector-3684891 </a> [accessed 10 Nov 19].</p>
+							<p>PinClipart.com. (2019) <i>Image Free Download Gaming Headset Clipart - Headset Vector - Png Download (#2104178) - PinClipart</i> [online] Available at:  <a href="https://www.pinclipart.com/pindetail/xJhTwh_image-free-download-gaming-headset-clipart-headset-vector/">https://www.pinclipart.com/pindetail/xJhTwh_image-free-download-gaming-headset-clipart-headset-vector/ </a> [accessed 25 Oct 19].</p>
+							<p>Freed, Z. (2019) <i>16 Interaction and UX Gesture Icons Sketch freebie - Download free resource for Sketch - Sketch App</i> [online] Available at: <a href="https://www.sketchappsources.com/free-source/4073-ux-gestures-sketch-freebie-resource.html">https://www.sketchappsources.com/free-source/4073-ux-gestures-sketch-freebie-resource.html </a> [accessed on 25 Oct 19].</p>
+							
+							<br>
+							
+							<h3>Microsoft Office 365 - Version 16.30 (MacOS) & Version 1902 (build 11328.20438) (Windows)</h3>
+
+							<p>Microsoft office is a core product for Microsoft only second to Windows itself. It now has several applications both in installed form and web based. The main ones are Excel, Access, PowerPoint, Word and One note.</p>
+
+							<p>Microsoft word is the go-to for word processing and all documentation for GAMR will be written up using it. It allows for great presented work using different fonts inserting pictures and automatic index pages. All work in progress will be saved under a proprietary DocX format but the final works will be saved to PDF so they cannot be altered.</p>
+
+							<p>Microsoft teams is also part of the office suite but does have a separate free version. Teams is Microsoft’s replacement for skype business as a long-term strategy as they have now creased development of that product. Microsoft Teams works great for us at GamR as it allows for chatting in a few different ways. We can chat directly 1 to 1 or in a whole group much like Skype. The fundamental part of teams is the teams tab where you can group people for projects. In these projects you can have a collective folder of work and there are other features allowing to create plans/ divide work accordingly.</p>
+
+							<p>Another key feature is collaborative work files where everyone can edit the same document or excel spreadsheet at the same time, a common complaint on the traditional file based versions.</p>
+
+							<h3>GamR’s software licenses requirements:</h3>
+
+							<p>Amazon products mentioned above are all subscription-based pay as you go products and all subscription fees include software licensing if that service uses something like Windows. Microsoft office is being licensed by RMIT while we are studying there. Teams can be free but since we are using the integrated office suite inside teams is also licensed from RMIT.</p>
+
+							<h3>Experience to date of GamR’s members</h3>
+
+							<p><b>Matthew</b> - Has studied a few Tafe courses such as Certificate IV, Diploma in networking along with an advanced diploma in network security. These courses covered a broad range of topics including AWS cloud. He has also achieved an AWS base level certification, the AWS Certified Cloud Practitioner and is currently working towards an AWS Certified Solutions Architect – Associate level certification.</p>
+							
+							<p><b>Travis</b> - has knowledge of CSS and HTML coding and has used this knowledge to create the complex website you see on our page today.</p>
+
+							<p><b>Bradley</b> - has knowledge in designing wireframes using Adobe XD. He has self taught and used trial and error to learn and perfect it for this project.</p>
+
+							<p><b>Zane</b> - is currently heavily interested in programming and this will be key for the future stages of GamR when development starts.</p>
+
+							<p><b>Trevor</b> - Trevor has been the GitHub specialist in the group. He has watched several YouTube guides and just taken a hands-on approach to learn and master it. He has a complex understanding of branches, forks and git repositories.</p>
+
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer" class="wrapper alt">
+				<div class="inner">
+					<ul class="menu">
+						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
